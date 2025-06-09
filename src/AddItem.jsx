@@ -8,7 +8,6 @@ function AddItem({addItem}) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
     const newItem = {
       name: itemName,
       price: parseFloat(itemPrice),
