@@ -1,25 +1,24 @@
 import React, { useState } from 'react';
 import './AddItem.css'
 
-function AddItem() {
+function AddItem({addItem}) {
   const [itemName, setItemName] = useState('');
   const [itemPrice, setItemPrice] = useState('');
   const [itemQuantity, setItemQuantity] = useState(1);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    
     const newItem = {
       name: itemName,
       price: parseFloat(itemPrice),
       quantity: parseInt(itemQuantity),
     };
-
-    console.log('Item added:', newItem);
+    
     if(!itemName || !itemPrice ) {
         alert("Please fill in all fields.");
     } else {
-        alert("Item Added");
+        addItem(newItem);
         setItemName('');
         setItemPrice('');
         setItemQuantity(1);
