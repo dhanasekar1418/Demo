@@ -1,0 +1,57 @@
+/* AddItem.css */
+
+.add-item-container {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 25px 30px;
+  width: 350px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.add-item-container form div {
+  margin-bottom: 18px;
+}
+
+.add-item-container label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.add-item-container input[type="text"],
+.add-item-container input[type="number"],
+.add-item-container select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1.8px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.add-item-container input[type="text"]:focus,
+.add-item-container input[type="number"]:focus,
+.add-item-container select:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+.add-item-container button {
+  background-color: #4a90e2;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.add-item-container button:hover {
+  background-color: #357abd;
+}
