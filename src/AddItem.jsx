@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './AddItem.css'
 
-
 function AddItem() {
   const [itemName, setItemName] = useState('');
   const [itemPrice, setItemPrice] = useState('');
