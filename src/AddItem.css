@@ -1,0 +1,55 @@
+.add-item-container {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 25px;
+  border: 2px solid #4caf50;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form > div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
