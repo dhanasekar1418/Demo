@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 
-function ListItem({ Item, deleteitem }) {
+function ListItem({ Item, deleteitem, updateItem, onSelectedCostChange }) {
   const [checkedItems, setCheckedItems] = useState([]);
 
   const handleCheckboxChange = (index) => {
@@ -11,6 +11,13 @@ function ListItem({ Item, deleteitem }) {
         : [...prev, index]
     );
   };
+
+
+  useEffect(() => {
+    const cost = Item.reduce((acc, item, index) =>
+      acc + (checkedItems.includes(index) ? item.price * item.quantity : 0), 0);
+      onSelectedCostChange(cost);
+  }, [checkedItems, Item]);
 
   const handleDeleteSelected = () => {
     deleteitem(checkedItems);
@@ -28,7 +35,7 @@ function ListItem({ Item, deleteitem }) {
             <div key={index} className="list-item">
               <p><strong>Name:</strong> {item.name}</p>
               <p><strong>Price:</strong> ₹{item.price}</p>
-              <p><strong>Quantity:</strong> {item.quantity}</p>
+              <p><strong>Quantity:</strong><button onClick={() => updateItem(index, 1)}>+</button> {item.quantity}<button onClick={() => updateItem(index, -1)}>-</button></p>
               <input
                 type="checkbox"
                 checked={checkedItems.includes(index)}
@@ -44,3 +51,4 @@ function ListItem({ Item, deleteitem }) {
 }
 
 export default ListItem;
+

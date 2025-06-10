@@ -12,6 +12,8 @@ function AddItem({addItem}) {
       name: itemName,
       price: parseFloat(itemPrice),
       quantity: parseInt(itemQuantity),
+      selected : true,
+      id : Date.now(),
     };
     
     if(!itemName || !itemPrice ) {
